@@ -40,7 +40,7 @@ namespace ConsoleAppOCRPerfPaddle
                     using (Mat src = Cv2.ImRead(file))
                     {
                         PaddleOcrResult result = all.Run(src);
-                        Console.WriteLine("Detected all texts: \n" + result.Text);
+                        Console.WriteLine("Detected text blocks: " + result.Regions.Count());
 
                     }
                 }
