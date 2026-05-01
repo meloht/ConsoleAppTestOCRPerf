@@ -29,8 +29,11 @@ namespace ConsoleAppTestOCRPerf
             string clsPath = @"C:\deeplearning\gitCode\meloht\RapidOCRSharpOnnx\RapidOCRSharpOnnx.TestCommon\Models\ch_PP-LCNet_x0_25_textline_ori_cls_mobile.onnx";
 
 
-            using RapidOCRSharp ocr = new RapidOCRSharp(new ExecutionProviderOpenVINO(
-                new OcrConfig(detectPath, recogPath, LangRec.CH, OCRVersion.PPOCRV5, clsPath),
+            using RapidOCRSharp ocr = new RapidOCRSharp(
+                new ExecutionProviderOpenVINO(
+                new OcrConfig(detectPath, recogPath,
+                LangRec.CH,
+                OCRVersion.PPOCRV5, clsPath),
                 IntelDeviceType.CPU));
 
             var list = Directory.GetFiles(@"C:\FtpFiles\OCRTestImages");

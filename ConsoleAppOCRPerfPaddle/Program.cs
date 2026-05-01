@@ -13,20 +13,15 @@ namespace ConsoleAppOCRPerfPaddle
         {
             Console.WriteLine("Hello, World!");
             OcrTest();
-
             Console.ReadKey();
 
         }
 
         private static void OcrTest()
         {
-            FullOcrModel model = LocalFullModels.ChineseV5;
-
-
+            FullOcrModel model = LocalFullModels.EnglishV4;
             var list = Directory.GetFiles(dir);
-
-
-            using (PaddleOcrAll all = new PaddleOcrAll(model, PaddleDevice.Gpu())
+            using (PaddleOcrAll all = new PaddleOcrAll(model, PaddleDevice.Mkldnn())
             {
                 AllowRotateDetection = true, /* 允许识别有角度的文字 */
                 Enable180Classification = true, /* 允许识别旋转角度大于90度的文字 */
