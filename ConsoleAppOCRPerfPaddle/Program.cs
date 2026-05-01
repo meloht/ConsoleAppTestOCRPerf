@@ -8,11 +8,13 @@ namespace ConsoleAppOCRPerfPaddle
 {
     internal class Program
     {
-        const string dir = @"D:\code\model\OCRTestImages";
+        const string dir = @"C:\FtpFiles\OCRTestImages";
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
             OcrTest();
+
+            Console.ReadKey();
 
         }
 
