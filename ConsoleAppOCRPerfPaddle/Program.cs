@@ -44,7 +44,7 @@ namespace ConsoleAppOCRPerfPaddle
                 }
                 sw.Stop();
 
-                Console.WriteLine($"PaddleOCR Elapsed time:{sw.Elapsed}");
+                Console.WriteLine($"PaddleSharp Elapsed time:{sw.Elapsed}");
 
             }
         }
