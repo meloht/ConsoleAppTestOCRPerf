@@ -26,7 +26,7 @@ namespace ConsoleAppOCRPerfPaddle
             var list = Directory.GetFiles(dir);
 
 
-            using (PaddleOcrAll all = new PaddleOcrAll(model, PaddleDevice.Mkldnn())
+            using (PaddleOcrAll all = new PaddleOcrAll(model, PaddleDevice.Gpu())
             {
                 AllowRotateDetection = true, /* 允许识别有角度的文字 */
                 Enable180Classification = true, /* 允许识别旋转角度大于90度的文字 */
